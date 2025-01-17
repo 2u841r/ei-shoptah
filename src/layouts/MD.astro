@@ -1,4 +1,6 @@
 ---
+import Layout from "./Layout.astro";
+
 const { frontmatter } = Astro.props;
 ---
 <!doctype html>
@@ -11,7 +13,9 @@ const { frontmatter } = Astro.props;
 		<title>{ frontmatter.year } - {frontmatter.week} </title>
 	</head>
 	<body>
-		<slot />
+		<Layout>
+			<slot />
+		</Layout>
 	</body>
 </html>
 
