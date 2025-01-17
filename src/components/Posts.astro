@@ -5,22 +5,42 @@ const allPosts = Object.values(
 ---
 
 <div id="container">
-  {
-    allPosts.map((post: any) => (
-      <li>
-        <a href={post.url}>{post.frontmatter.week} - {post.frontmatter.published}</a>
-      </li>
-    ))
-  }
+  <table>
+    <thead>
+      <tr>
+        <th>Issue</th>
+        <th>published</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        allPosts.map((post: any) => (
+          // <li>
+          //   <a href={post.url}>{post.frontmatter.week} - {post.frontmatter.published}</a>
+          // </li>
+
+          <tr>
+            <td>
+              <a href={post.url}> #{post.frontmatter.week} </a>
+            </td>
+            <td>
+              <a href={post.url}> {post.frontmatter.published} </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
 </div>
 
 <style>
   #container {
-    background-color: #FFFFE0; 
+    background-color: #ffffe0;
     padding: 1rem;
   }
 
   li {
+    padding: 0.2rem;
     list-style: none;
     margin: 0.5rem 0;
   }
@@ -29,18 +49,7 @@ const allPosts = Object.values(
     text-decoration: none;
     color: black;
   }
-
-  /* Mobile first */
-  @media (min-width: 600px) {
-    #container {
-      padding: 2rem;
-    }
-  }
-
-  @media (min-width: 900px) {
-    #container {
-      padding: 3rem;
-    }
+  a:hover{
+    background-color: lightblue;
   }
 </style>
-

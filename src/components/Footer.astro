@@ -1,33 +1,31 @@
 <footer>
   <p>© ২০২৫, এই সপ্তাহ</p>
-  <div>
-    <a href="/privacy-policy">Privacy Policy</a>
-    <a href="/terms-and-contidions">Terms & Contidions</a>
-  </div>
+  <ul>
+    <li><a href="/privacy-policy">Privacy Policy</a></li>
+    <li><a href="/terms-and-contidions">Terms & Contidions</a></li>
+  </ul>
 </footer>
 
 <style>
   footer {
-    /* text-align: center;
-    background-color: red;
-    position: fixed;
-    bottom: 0;
-    width: 100%; */
-    position: fixed;
-    bottom: 0;
-    width: 83%;
-    background-color: lightblue;
+    background-color: #add8e6;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    margin-top: auto;
   }
 
-  footer div {
+  ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
+  }
+
+  li {
+    margin: 0;
   }
 
   a {
@@ -35,15 +33,22 @@
     color: black;
   }
 
-  @media (min-width: 600px) {
-    footer {
-      padding: 1rem 2rem;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
   }
 
-  @media (min-width: 900px) {
-    footer {
-      padding: 1rem 3rem;
+  main {
+    flex: 1;
+  }
+
+  /* Mobile first */
+  @media (max-width: 400px) {
+    ul {
+      flex-direction: column;
+      align-items: flex-end;
     }
   }
 </style>
