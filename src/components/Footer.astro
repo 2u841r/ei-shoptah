@@ -8,12 +8,23 @@
 
 <style>
   footer {
-    text-align: center;
-    background-color: #ffffe0;
+    /* text-align: center;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    width: 100%; */
+    position: fixed;
+    bottom: 0;
+    width: 83%;
+    background-color: lightblue;
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
   }
 
-  footer div{
+  footer div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,19 +33,17 @@
   a {
     text-decoration: none;
     color: black;
-    padding: 0.5rem;
   }
 
-  /* Mobile first */
   @media (min-width: 600px) {
     footer {
-      padding: 2rem;
+      padding: 1rem 2rem;
     }
   }
 
   @media (min-width: 900px) {
     footer {
-      padding: 3rem;
+      padding: 1rem 3rem;
     }
   }
 </style>
