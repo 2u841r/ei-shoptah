@@ -2,7 +2,8 @@
 import Submit from "../components/Submit.astro";
 import Layout from "./Layout.astro";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, url} = Astro.props;
+
 ---
 
 <!doctype html>
@@ -19,7 +20,7 @@ const { frontmatter } = Astro.props;
     <Layout>
       <div id="container">
         <slot />
-        <Submit />
+        <Submit url={url} />
       </div>
     </Layout>
   </body>
