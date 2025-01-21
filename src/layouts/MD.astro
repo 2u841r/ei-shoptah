@@ -13,6 +13,7 @@ const { frontmatter } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{frontmatter.year} - {frontmatter.week}</title>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
   </head>
   <body>
     <Layout>
@@ -31,5 +32,4 @@ const { frontmatter } = Astro.props;
   #container {
     padding: 1rem;
   }
-
 </style>
