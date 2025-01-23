@@ -3,7 +3,7 @@ const url = Astro.props.url;
 ---
 <br />
 <form action="https://formspree.io/f/mwppgzej" method="POST">
-  <p>গুরুত্বপূর্ণ কিছু বাদ গিয়েছে? জমা দিন</p>
+  <p>গুরুত্বপূর্ণ কিছু বাদ গিয়েছে? আমাদের জানান</p>
   <input type="hidden" name="url" value={url} />
   <label>
     আপনার ইমেইল
@@ -18,3 +18,59 @@ const url = Astro.props.url;
   </div>
   <button type="submit">পাঠিয়ে দিন</button>
 </form>
+
+<style>
+  form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #ffffe0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .h-captcha {
+    margin: 1rem 0;
+  }
+</style>
